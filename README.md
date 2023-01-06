@@ -1,16 +1,18 @@
-# Experiment--04-Implementation-of-combinational-logic-using-universal-gates
-Implementation of combinational logic using universal-gates
- 
+Developed by : ROHIT JAIN D  
+Reference No : 22005894  
+
 ## AIM:
-To implement the given logic function using NAND and NOR gates and to verify its operation in Quartus using Verilog programming.
+To implement the given logic function using NAND and NOR gates and to verify its operation in Quartus using Verilog programming.  
 
-F=((C'.B.A)'(D'.C.A)'(C.B'.A)')' using NAND gate
-F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')' using NOR gate
-## Equipments Required:
-## Hardware – PCs, Cyclone II , USB flasher
-## Software – Quartus prime
-
-
+F=((C'.B.A)'(D'.C.A)'(C.B'.A)')' using NAND gate  
+F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')' using NOR gate  
+## Equipments Required:  
+- Hardware  
+  - PCs
+  - Cyclone II 
+  - USB flasher
+- Software
+  - Quartus prime
 ## Theory
 Logic gates are electronic circuits which perform logical functions on one or more inputs to produce one output. 
 
@@ -26,18 +28,37 @@ NOR gate is actually a combination of two logic gates: OR gate followed by NOT g
 
 F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 
-## Logic Diagram
-## Procedure
+## Logic Diagram  
+
+
+
+
+## Procedure  
+
+
+
+
+
 ## Program:
-/*
-Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-## RTL realization
+Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.  
+```
+
+
+
+```
+ 
+
+
+
 
 ## Output:
-## RTL
+
+## RTL realization
+
 ## Timing Diagram
+
+
+
+
 ## Result:
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
