@@ -28,36 +28,66 @@ NOR gate is actually a combination of two logic gates: OR gate followed by NOT g
 
 F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 
-## Logic Diagram  
 
 
 
 
 ## Procedure  
-
-
-
-
-
+- Create a project with required entities.
+- Create a module along with respective file name.
+- Run the respective programs for the given boolean equations.
+- Run the module and get the respective RTL outputs.
+- Create university program(VWF) for getting timing diagram.
+- Give the respective inputs for timing diagram and obtain the results.
 ## Program:
 Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.  
+- ## COMBINATION 1 USING NAND GATE
 ```
+module combone(A,B,C,D,F);
+input A,B,C,D;
+output F;
+wire P,Q,R;
+assign P=(~C & B & A);
+assign Q=(~D & C & A);
+assign R=(C & ~B & A);
+assign F=~(~P & ~Q & ~R);
+endmodule
+```  
 
-
-
+- ## COMBINATION 2 USING NOR GATE
 ```
- 
-
-
-
-
+module combtwo(A,B,C,D,F);
+input A,B,C,D;
+output F;
+wire P,Q,R;
+assign P = (C & ~B & A);
+assign Q = (D & ~C & A);
+assign R = (C & ~B & A);
+assign F = (~(~(P | Q | R)));
+endmodule```
+```
 ## Output:
+## COMBINATION 1:
+- ## RTL realization:
+![Screenshot_20230107_074607](https://user-images.githubusercontent.com/118707073/211157437-16b088b7-accf-468e-8a80-7868d16912db.png)
 
-## RTL realization
+- ## Timing Diagram:  
+![Screenshot_20230107_080738](https://user-images.githubusercontent.com/118707073/211157446-ad7b8560-55c1-45b6-a6b2-735efc7f1a60.png)
 
-## Timing Diagram
+- ## Truth Table:  
+![Screenshot_20230107_104520](https://user-images.githubusercontent.com/118707073/211162655-b33052f6-b805-4520-b784-18d258b54e96.png)
 
 
+## COMBINATION 2:
+
+- ## RTL realization:
+![Screenshot_20230107_093811](https://user-images.githubusercontent.com/118707073/211160189-75cc6000-ae61-4f72-a32b-04d20ba3bb6a.png)
+
+- ## Timing Diagram: 
+![Screenshot_20230107_104759](https://user-images.githubusercontent.com/118707073/211162693-56338373-fcce-4cc3-814e-ca88e74b8ffd.png)
+
+- ## Truth Table:
+![Screenshot_20230107_104317](https://user-images.githubusercontent.com/118707073/211162664-5f406fba-3204-441a-a687-6ce3244fafc6.png)
 
 
 ## Result:
