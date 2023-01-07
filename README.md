@@ -47,10 +47,10 @@ module combone(A,B,C,D,F);
 input A,B,C,D;
 output F;
 wire P,Q,R;
-assign P=(~C & B & A);
-assign Q=(~D & C & A);
-assign R=(C & ~B & A);
-assign F=~(~P & ~Q & ~R);
+assign P=(~(~C & B & A));
+assign Q=(~(~D & C & A));
+assign R=(~(C & ~B & A));
+assign F=~(P & Q & R);
 endmodule
 ```  
 
@@ -59,12 +59,13 @@ endmodule
 module combtwo(A,B,C,D,F);
 input A,B,C,D;
 output F;
-wire P,Q,R;
+wire P,Q,R,S;
 assign P = (C & ~B & A);
 assign Q = (D & ~C & A);
 assign R = (C & ~B & A);
-assign F = (~(~(P | Q | R)));
-endmodule```
+assign S = (~(P | Q | R));
+assign F = (~s);
+endmodule
 ```
 ## Output:
 ## COMBINATION 1:
